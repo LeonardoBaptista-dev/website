@@ -99,6 +99,30 @@
 
     .header-menu__link:hover:after {
       width: 100%;
+
+    }.header-menu__Portifolio {
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--text-color);
+      display: inline-flex;
+      position: relative;
+      transition: .3s;
+    }
+
+    .header-menu__Portifolio:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+      transition: .3s;
+    }
+
+    .header-menu__Portifolio:hover:after {
+      width: 100%;
     }
 
     .header__moon {
@@ -112,6 +136,19 @@
     }
 
     .header__moon svg {
+      fill: var(--text-color);
+    }
+    .header__language {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      font-size: 24px;
+      color: var(--text-color);
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .header__language svg {
       fill: var(--text-color);
     }
 
@@ -255,11 +292,22 @@
     .is-black .header-menu__link:after {
       background: var(--invert-primary-color);
     }
-
-    .is-black .header__moon {
+    .is-black .header-menu__Portifolio {
       color: var(--invert-text-color);
     }
 
+    .is-black .header-menu__Portifolio:after {
+      background: var(--invert-primary-color);
+    }
+    .is-black .header__language  {
+      color: var(--invert-text-color);
+    }
+    .is-black .header__moon {
+      color: var(--invert-text-color);
+    }
+    .is-black .header__language svg {
+      fill: var(--invert-text-color);
+    }
     .is-black .header__moon svg {
       fill: var(--invert-text-color);
     }
@@ -310,6 +358,9 @@
 
     @media (max-width: 1023px) {
       .header-menu__link {
+        font-size: 16px;
+      }
+      .header-menu__Portifolio {
         font-size: 16px;
       }
       .header__logo {
@@ -366,6 +417,9 @@
         margin-bottom: 20px;
       }
       .header-menu__link {
+        font-size: 24px;
+
+      }.header-menu__Portifolio {
         font-size: 24px;
       }
       .intro__body {
